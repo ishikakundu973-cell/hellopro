@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Planets</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("jeremy-thomas-E0AHdsENmDg-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .planet {
+            width: 150px;
+            max-width: 35vw;
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 600px) {
+            .planet {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="earth.png" class="planet" alt="Earth">
+        <img src="moon.png" class="planet" alt="Moon">
+        <img src="mars.png" class="planet" alt="Mars">
+        <img src="n.png" class="planet" alt="Planet Image 1">
+        <img src="images.png" class="planet" alt="Planet Image 2">
+    </div>
+</body>
+</html>
